@@ -1,0 +1,561 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/randymized/composable-middleware">composable-middleware (v0.3.0)</a>
+</h1>
+<h4>Treat a sequence of middleware as middleware.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.composable-middleware">module composable-middleware</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.composable-middleware.composable-middleware">
+            function <span class="apidocSignatureSpan"></span>composable-middleware
+            <span class="apidocSignatureSpan">(components)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.composable-middleware.MiddlewareCommonObject">
+            function <span class="apidocSignatureSpan">composable-middleware.</span>MiddlewareCommonObject
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.composable-middleware.composable_middleware">
+            function <span class="apidocSignatureSpan">composable-middleware.</span>composable_middleware
+            <span class="apidocSignatureSpan">(components)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.composable-middleware.is_protected_context">
+            function <span class="apidocSignatureSpan">composable-middleware.</span>is_protected_context
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">composable-middleware.</span>MiddlewareCommonObject.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.composable-middleware.MiddlewareCommonObject">module composable-middleware.MiddlewareCommonObject</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.composable-middleware.MiddlewareCommonObject.MiddlewareCommonObject">
+            function <span class="apidocSignatureSpan">composable-middleware.</span>MiddlewareCommonObject
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.composable-middleware.MiddlewareCommonObject.prototype">module composable-middleware.MiddlewareCommonObject.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.composable-middleware.MiddlewareCommonObject.prototype._middleware_common_object">
+            function <span class="apidocSignatureSpan">composable-middleware.MiddlewareCommonObject.prototype.</span>_middleware_common_object
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.composable-middleware.composable_middleware">module composable-middleware.composable_middleware</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.composable-middleware.composable_middleware.composable_middleware">
+            function <span class="apidocSignatureSpan">composable-middleware.</span>composable_middleware
+            <span class="apidocSignatureSpan">(components)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.composable-middleware.composable_middleware.MiddlewareCommonObject">
+            function <span class="apidocSignatureSpan">composable-middleware.composable_middleware.</span>MiddlewareCommonObject
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.composable-middleware.composable_middleware.is_protected_context">
+            function <span class="apidocSignatureSpan">composable-middleware.composable_middleware.</span>is_protected_context
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.composable-middleware" id="apidoc.module.composable-middleware">module composable-middleware</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.composable-middleware.composable-middleware" id="apidoc.element.composable-middleware.composable-middleware">
+        function <span class="apidocSignatureSpan"></span>composable-middleware
+        <span class="apidocSignatureSpan">(components)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function composable_middleware(components) {
+  var stack= [];
+  var uses_this;
+  var stacklength= 0;
+
+
+  function middleware(req,res,out) {
+    var layer= 0;
+    var that= this;
+    if (is_protected_context(this)){
+      return middleware.call(new MiddlewareCommonObject(),req,res,out)
+    }
+    else {
+      this.req= req;
+      this.res= res;
+    }
+    (function next(err) {
+      var fn= stack[layer++];
+      if (fn == null) {  // reached end of stack
+        out(err);
+      }
+      else {
+        if (err) {
+          switch (fn.length) {
+            case 4:
+              fn.call(that,err,req,res,next);
+              break;
+            case 2:
+              fn.call(that,err,next);
+              break;
+            default:
+              next(err);
+              break;
+          }
+        }
+        else {
+          switch (fn.length) {
+            case 3:
+              fn.call(that,req,res,next);
+              break;
+            case 1:
+              fn.call(that,next);
+              break;
+            case 0:
+              // compatibility with https://github.com/flatiron/union
+              res.removeListener('next', next);
+              res.once('next', next);
+              fn.call(that);
+              break;
+            default:
+              next();
+              break;
+          }
+        }
+      }
+    })()
+  }
+
+
+  var use= middleware.use= function(mw) {
+    for (var i=0, len=arguments.length; i&lt;len; i++) {
+      var a= arguments[i];
+      if (Array.isArray(a)) {
+        use.apply(this,a)
+      }
+      else if (typeof a === 'function' &amp;&amp; a.length &lt;= 4){
+        if (a.length &lt;= 2) uses_this= true;
+        stack.push(a);
+      }
+      else {
+        throw new TypeError('Middleware function was expected');
+      }
+    }
+    stacklength= stack.length;
+    return middleware;
+  }
+
+  use.apply(middleware,arguments);
+  return middleware;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.composable-middleware.MiddlewareCommonObject" id="apidoc.element.composable-middleware.MiddlewareCommonObject">
+        function <span class="apidocSignatureSpan">composable-middleware.</span>MiddlewareCommonObject
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Middleware_Common_Object()
+{
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.composable-middleware.composable_middleware" id="apidoc.element.composable-middleware.composable_middleware">
+        function <span class="apidocSignatureSpan">composable-middleware.</span>composable_middleware
+        <span class="apidocSignatureSpan">(components)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function composable_middleware(components) {
+  var stack= [];
+  var uses_this;
+  var stacklength= 0;
+
+
+  function middleware(req,res,out) {
+    var layer= 0;
+    var that= this;
+    if (is_protected_context(this)){
+      return middleware.call(new MiddlewareCommonObject(),req,res,out)
+    }
+    else {
+      this.req= req;
+      this.res= res;
+    }
+    (function next(err) {
+      var fn= stack[layer++];
+      if (fn == null) {  // reached end of stack
+        out(err);
+      }
+      else {
+        if (err) {
+          switch (fn.length) {
+            case 4:
+              fn.call(that,err,req,res,next);
+              break;
+            case 2:
+              fn.call(that,err,next);
+              break;
+            default:
+              next(err);
+              break;
+          }
+        }
+        else {
+          switch (fn.length) {
+            case 3:
+              fn.call(that,req,res,next);
+              break;
+            case 1:
+              fn.call(that,next);
+              break;
+            case 0:
+              // compatibility with https://github.com/flatiron/union
+              res.removeListener('next', next);
+              res.once('next', next);
+              fn.call(that);
+              break;
+            default:
+              next();
+              break;
+          }
+        }
+      }
+    })()
+  }
+
+
+  var use= middleware.use= function(mw) {
+    for (var i=0, len=arguments.length; i&lt;len; i++) {
+      var a= arguments[i];
+      if (Array.isArray(a)) {
+        use.apply(this,a)
+      }
+      else if (typeof a === 'function' &amp;&amp; a.length &lt;= 4){
+        if (a.length &lt;= 2) uses_this= true;
+        stack.push(a);
+      }
+      else {
+        throw new TypeError('Middleware function was expected');
+      }
+    }
+    stacklength= stack.length;
+    return middleware;
+  }
+
+  use.apply(middleware,arguments);
+  return middleware;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.composable-middleware.is_protected_context" id="apidoc.element.composable-middleware.is_protected_context">
+        function <span class="apidocSignatureSpan">composable-middleware.</span>is_protected_context
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function is_protected_context(obj)
+{
+  return obj === undefined ||
+    obj === global ||
+    (obj._middleware_common_object === undefined &amp;&amp; obj.route !== undefined &amp;&amp; obj.handle !== undefined)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.composable-middleware.MiddlewareCommonObject" id="apidoc.module.composable-middleware.MiddlewareCommonObject">module composable-middleware.MiddlewareCommonObject</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.composable-middleware.MiddlewareCommonObject.MiddlewareCommonObject" id="apidoc.element.composable-middleware.MiddlewareCommonObject.MiddlewareCommonObject">
+        function <span class="apidocSignatureSpan">composable-middleware.</span>MiddlewareCommonObject
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Middleware_Common_Object()
+{
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.composable-middleware.MiddlewareCommonObject.prototype" id="apidoc.module.composable-middleware.MiddlewareCommonObject.prototype">module composable-middleware.MiddlewareCommonObject.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.composable-middleware.MiddlewareCommonObject.prototype._middleware_common_object" id="apidoc.element.composable-middleware.MiddlewareCommonObject.prototype._middleware_common_object">
+        function <span class="apidocSignatureSpan">composable-middleware.MiddlewareCommonObject.prototype.</span>_middleware_common_object
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_middleware_common_object = function ()
+{
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.composable-middleware.composable_middleware" id="apidoc.module.composable-middleware.composable_middleware">module composable-middleware.composable_middleware</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.composable-middleware.composable_middleware.composable_middleware" id="apidoc.element.composable-middleware.composable_middleware.composable_middleware">
+        function <span class="apidocSignatureSpan">composable-middleware.</span>composable_middleware
+        <span class="apidocSignatureSpan">(components)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function composable_middleware(components) {
+  var stack= [];
+  var uses_this;
+  var stacklength= 0;
+
+
+  function middleware(req,res,out) {
+    var layer= 0;
+    var that= this;
+    if (is_protected_context(this)){
+      return middleware.call(new MiddlewareCommonObject(),req,res,out)
+    }
+    else {
+      this.req= req;
+      this.res= res;
+    }
+    (function next(err) {
+      var fn= stack[layer++];
+      if (fn == null) {  // reached end of stack
+        out(err);
+      }
+      else {
+        if (err) {
+          switch (fn.length) {
+            case 4:
+              fn.call(that,err,req,res,next);
+              break;
+            case 2:
+              fn.call(that,err,next);
+              break;
+            default:
+              next(err);
+              break;
+          }
+        }
+        else {
+          switch (fn.length) {
+            case 3:
+              fn.call(that,req,res,next);
+              break;
+            case 1:
+              fn.call(that,next);
+              break;
+            case 0:
+              // compatibility with https://github.com/flatiron/union
+              res.removeListener('next', next);
+              res.once('next', next);
+              fn.call(that);
+              break;
+            default:
+              next();
+              break;
+          }
+        }
+      }
+    })()
+  }
+
+
+  var use= middleware.use= function(mw) {
+    for (var i=0, len=arguments.length; i&lt;len; i++) {
+      var a= arguments[i];
+      if (Array.isArray(a)) {
+        use.apply(this,a)
+      }
+      else if (typeof a === 'function' &amp;&amp; a.length &lt;= 4){
+        if (a.length &lt;= 2) uses_this= true;
+        stack.push(a);
+      }
+      else {
+        throw new TypeError('Middleware function was expected');
+      }
+    }
+    stacklength= stack.length;
+    return middleware;
+  }
+
+  use.apply(middleware,arguments);
+  return middleware;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.composable-middleware.composable_middleware.MiddlewareCommonObject" id="apidoc.element.composable-middleware.composable_middleware.MiddlewareCommonObject">
+        function <span class="apidocSignatureSpan">composable-middleware.composable_middleware.</span>MiddlewareCommonObject
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Middleware_Common_Object()
+{
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.composable-middleware.composable_middleware.is_protected_context" id="apidoc.element.composable-middleware.composable_middleware.is_protected_context">
+        function <span class="apidocSignatureSpan">composable-middleware.composable_middleware.</span>is_protected_context
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function is_protected_context(obj)
+{
+  return obj === undefined ||
+    obj === global ||
+    (obj._middleware_common_object === undefined &amp;&amp; obj.route !== undefined &amp;&amp; obj.handle !== undefined)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
